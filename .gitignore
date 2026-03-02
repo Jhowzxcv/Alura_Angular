@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+out-tsc/
+.tmp/
+.bazel-out/
+
+# Angular cache
+.angular/cache/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+libpeerconnection.log
+testem.log
+
+# IDEs / editors
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history/
+
+# OS / system files
+.DS_Store
+Thumbs.db
+
+# Coverage / testing
+coverage/
