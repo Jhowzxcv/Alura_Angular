@@ -1,5 +1,6 @@
-# Node modules
+# Node modules (raiz e subpastas)
 node_modules/
+**/node_modules/
 
 # Build output
 dist/
@@ -8,7 +9,7 @@ out-tsc/
 .bazel-out/
 
 # Angular cache
-.angular/cache/
+.angular/
 
 # Logs
 npm-debug.log*

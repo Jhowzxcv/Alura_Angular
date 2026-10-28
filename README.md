@@ -1,27 +1,88 @@
-# Memoteca
+# 💡 Memoteca — Aplicação Angular 14
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+Projeto desenvolvido durante o curso **"Angular 14: aplique os conceitos e desenvolva seu primeiro CRUD"** da **Alura**.
 
-## Development server
+O **Memoteca** é uma aplicação web para registro, visualização, edição e exclusão de pensamentos, citações e trechos de poesias ou referências favoritas, conectado a uma API REST simulada com `json-server`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Mural de Pensamentos:** Listagem dinâmica dos pensamentos cadastrados.
+- **Cadastro de Novo Pensamento:** Formulário com seleção de modelos visuais e autoria.
+- **Edição:** Alteração do conteúdo, autoria ou modelo de pensamentos existentes.
+- **Exclusão:** Confirmação e remoção de pensamentos.
+- **Integração REST:** Comunicação assíncrona com backend via `HttpClient` e `Observables` (RxJS).
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Tecnologias & Conceitos
 
-## Running unit tests
+- **Framework:** [Angular](https://angular.io/) (v14)
+- **Linguagem:** TypeScript
+- **Reatividade:** RxJS (`Observable`)
+- **Estilização:** CSS3 puro e responsivo
+- **API Backend:** [JSON Server](https://github.com/typicode/json-server)
+- **Conceitos Angular aplicados:**
+  - Componentes e Template-Driven forms
+  - *Data Binding* (Property Binding, Event Binding e Two-Way Data Binding com `[(ngModel)]`)
+  - Diretivas estruturais (`*ngFor`, `*ngIf`) e de atributo (`[ngClass]`)
+  - Serviços e Injeção de Dependência (`@Injectable`)
+  - Roteamento com `@angular/router` (`AppRoutingModule`)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 📂 Estrutura do Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```text
+Alura_Angular/
+├── backend/
+│   ├── db.json               # Banco de dados simulado
+│   └── package.json          # Script para iniciar json-server na porta 3000
+│
+├── src/
+│   ├── app/
+│   │   ├── componentes/
+│   │   │   ├── cabecalho/    # Header da aplicação
+│   │   │   ├── rodape/       # Footer da aplicação
+│   │   │   └── pensamentos/
+│   │   │       ├── criar-pensamento/
+│   │   │       ├── listar-pensamento/
+│   │   │       ├── editar-pensamento/
+│   │   │       ├── excluir-pensamento/
+│   │   │       ├── pensamento/         # Card individual
+│   │   │       ├── pensamento.service.ts # Consumo HTTP
+│   │   │       └── pensamento.ts       # Interface Model
+│   │   ├── app-routing.module.ts
+│   │   └── app.module.ts
+│   └── assets/imagens/       # Logos e ícones da aplicação
+│
+├── angular.json
+├── package.json
+└── tsconfig.json
+```
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## ⚙️ Como Executar
+
+### 1. Pré-requisitos
+- [Node.js](https://nodejs.org/) instalado
+- [Angular CLI](https://angular.io/cli) instalado globalmente (`npm install -g @angular/cli`)
+
+### 2. Iniciar o Backend (JSON Server)
+Em um terminal, acesse a pasta `backend`, instale as dependências e inicie o servidor:
+```bash
+cd backend
+npm install
+npm start
+```
+> O backend rodará em: `http://localhost:3000/pensamentos`
+
+### 3. Iniciar o Frontend (Angular)
+Em outro terminal na raiz do projeto, instale as dependências e inicie o servidor de desenvolvimento:
+```bash
+npm install
+ng serve
+```
+> Acesse a aplicação no seu navegador em: **`http://localhost:4200`**
